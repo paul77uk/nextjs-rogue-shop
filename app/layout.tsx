@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import Head from "./head";
 import { GlobalProvider } from "./GlobalProvider";
+import Header from "@/components/layout/Header";
+import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -20,7 +22,12 @@ export default function RootLayout({
     <html lang="en">
       <Head />
       <body className={inter.className}>
-        <GlobalProvider>{children}</GlobalProvider>
+        <GlobalProvider>
+          <Header />
+          {children}
+        </GlobalProvider>
+
+        <Script src="https://kit.fontawesome.com/7e7e2db52a.js"></Script>
       </body>
     </html>
   );
