@@ -4,6 +4,7 @@ import "./globals.css";
 import Head from "./head";
 import { GlobalProvider } from "./GlobalProvider";
 import Header from "@/components/layout/Header";
+import Footer from "@/components/layout/Footer";
 import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,6 +26,7 @@ export default function RootLayout({
         <GlobalProvider>
           <Header />
           {children}
+          <Footer />
         </GlobalProvider>
 
         <Script src="https://kit.fontawesome.com/7e7e2db52a.js"></Script>
