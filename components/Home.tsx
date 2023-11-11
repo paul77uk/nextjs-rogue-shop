@@ -12,7 +12,7 @@ interface Props {
 const Home = ({ data }: Props) => {
   const { products } = data;
   return (
-    <div className="m-6">
+    <div className="m-6 min-h-[calc(100vh-215px)] overflow-auto">
       {products.length === 0 ? (
         <h1>No Products</h1>
       ) : (
