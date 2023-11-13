@@ -7,7 +7,7 @@ describe("Home Page", () => {
       .within(() => {
         cy.get('[data-test="product-name"]').should(
           "contain",
-          "Rogue Strongman Sandbags"
+          "Rogue Strongman Sandbag"
         );
         cy.get('[data-test="product-price"]').should("contain", "£125.36");
       });
@@ -27,7 +27,7 @@ describe("Home Page", () => {
       .within(() => {
         cy.get('[data-test="product-name"]').should(
           "contain",
-          "Rogue Rubber Atlas Stones"
+          "Rogue Rubber Atlas Stone"
         );
         cy.get('[data-test="product-price"]').should("contain", "£532.79");
       });

@@ -25,7 +25,9 @@ export default function RootLayout({
       <body className={inter.className}>
         <GlobalProvider>
           <Header />
-          {children}
+          <div className="min-h-[calc(100vh-167px)] overflow-auto">
+            {children}
+          </div>
           <Footer />
         </GlobalProvider>
 

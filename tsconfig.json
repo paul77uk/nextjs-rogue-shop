@@ -20,14 +20,21 @@
     ],
     "paths": {
       "@/*": ["./*"]
-    }
+    },
   },
   "ts-node": {
     "compilerOptions": {
       "module": "ESNext",
       "moduleResolution": "Node"
-    },
+    }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    ".next/types/**/*.ts",
+    "cypress/e2e/header.cy.js",
+    "cypress/e2e/home.cy.js"
+  ],
   "exclude": ["node_modules"]
 }

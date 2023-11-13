@@ -12,11 +12,11 @@ interface Props {
 const Home = ({ data }: Props) => {
   const { products } = data;
   return (
-    <div className="m-6 min-h-[calc(100vh-215px)] overflow-auto">
+    <div className="m-6">
       {products.length === 0 ? (
         <h1>No Products</h1>
       ) : (
-        <div className="grid grid-cols-3 gap-4 lg:grid-cols-4">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-5 lg:grid-cols-4 place-items-center items-start">
           {products.map((product) => (
             <ProductItem key={product._id} product={product} />
           ))}
