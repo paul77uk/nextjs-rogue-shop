@@ -1,15 +1,19 @@
 import dbConnect from "@/backend/config/dbConnect";
-import { allProducts } from "@/backend/controllers/productControllers";
+import { getProductDetails } from "@/backend/controllers/productControllers";
 import { createEdgeRouter } from "next-connect";
 import { NextRequest } from "next/server";
 
-interface RequestContext {}
+interface RequestContext {
+  params: {
+    id: string;
+  };
+}
 
 const router = createEdgeRouter<NextRequest, RequestContext>();
 
 dbConnect();
 
-router.get(allProducts);
+router.get(getProductDetails);
 
 export async function GET(req: NextRequest, ctx: RequestContext) {
   return router.run(req, ctx);

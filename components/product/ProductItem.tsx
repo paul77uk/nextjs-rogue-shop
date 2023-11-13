@@ -1,5 +1,6 @@
 import { IProduct } from "@/backend/models/product";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 interface Props {
@@ -9,17 +10,25 @@ interface Props {
 const ProductItem = ({ product }: Props) => {
   return (
     <>
-      <div data-test="product-item">
+      <Link
+        href={`/products/${product?._id}`}
+        data-test="product-item"
+        className="mb-10 text-xs sm:text-base"
+      >
         <Image
           src={product.image}
           alt={product.name}
           width={200}
           height={200}
-          className="md:w-72 lg:w-96"
+          className="sm:w-72 lg:w-96"
         />
-        <h1 className="mt-3 text-sm" data-test="product-name">{product.name}</h1>
-        <p className="font-bold text-sm mt-1" data-test="product-price">£{product.price}</p>
-      </div>
+        <h1 className="mt-3 " data-test="product-name">
+          {product.name}
+        </h1>
+        <p className="font-bold mt-1" data-test="product-price">
+          £{product.price}
+        </p>
+      </Link>
     </>
   );
 };

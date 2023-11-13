@@ -3,6 +3,7 @@ import mongoose, { Document, Schema } from "mongoose";
 export interface IProduct extends Document {
   name: string;
   image: string;
+  detailImage: string;
   description: string;
   brand: string;
   category: string;
@@ -23,6 +24,10 @@ const productSchema: Schema = new Schema({
   image: {
     type: String,
     required: [true, "Please enter product image"],
+  },
+  detailImage: {
+    type: String,
+    required: [true, "Please enter product detail image"],
   },
   description: {
     type: String,

@@ -1,6 +1,8 @@
 import Home from "@/components/Home";
 
-export const dynamic = "force-dynamic"
+export const metadata = {
+  title: "HomePage - Rogue Shop",
+};
 
 const getProducts = async () => {
   const res = await fetch(`${process.env.API_URL}/api/products`);
