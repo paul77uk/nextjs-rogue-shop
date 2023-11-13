@@ -5,7 +5,15 @@ export const metadata = {
 };
 
 const getProducts = async () => {
-  const res = await fetch(`${process.env.API_URL}/api/products`);
+  const res = await fetch(
+    `${process.env.API_URL}/api/products`
+    // ,
+    // {
+    //   next: {
+    //     revalidate: 1,
+    //   },
+    // }
+  );
   return res.json();
 };
 
